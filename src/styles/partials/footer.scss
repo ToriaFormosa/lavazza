@@ -1,0 +1,64 @@
+.footer {
+	padding: 67px 0 50px;
+	background-color: $mainColor;
+	color: $white;
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__col {
+		width: 20%;
+		margin-bottom: 20px;
+
+		@include max(md) {
+			width: 50%;
+		}
+
+		@include max(xs) {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	&__copyrights,
+	&__policy,
+	&__created {
+		font-size: 14px;
+		line-height: 17px;
+		color: rgba($gray-9c, 0.7);
+	}
+
+	&__copyrights {
+		margin-top: 20px;
+	}
+
+	&__policy,
+	&__created {
+		display: inline-block;
+		text-decoration: underline;
+		margin-top: 20px;
+
+		@include hover {
+			text-decoration: none;
+		}
+	}
+
+	&__contacts a,
+	address,
+	&__schedule {
+		font-size: 14px;
+		line-height: 180%;
+		font-weight: 500;
+		font-style: normal;
+		color: $white;
+	}
+
+	&__contacts a {
+		@include hover {
+			text-decoration: underline;
+		}
+	}
+}

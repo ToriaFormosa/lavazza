@@ -1,0 +1,73 @@
+.field {
+	$self: &;
+
+	position: relative;
+	display: block;
+	width: 100%;
+	cursor: text;
+
+	&:not(.field--phone) {
+		#{$self}__hint {
+			position: absolute;
+			top: -18px;
+			left: 0;
+			display: block;
+			transition: 0.3s;
+			font-size: 12px;
+			line-height: 16px;
+			color: $black;
+		}
+
+		input {
+			&::placeholder {
+				color: transparent;
+			}
+
+			&:placeholder-shown ~ #{$self}__hint {
+				font-size: 16px;
+				line-height: 16px;
+				color: $gray-6b;
+				top: 10px;
+
+				@include max(sm) {
+					font-size: 14px;
+					top: 5px;
+				}
+			}
+
+			&:focus {
+				~ #{$self}__hint {
+					font-size: 12px;
+					top: -18px;
+				}
+			}
+		}
+	}
+
+	input {
+		width: 100%;
+		height: 43px;
+		border: none;
+		border-bottom: 1px solid $gray-e6;
+		font-family: $mainFont;
+		font-size: 16px;
+		line-height: 180%;
+		color: $gray-6b;
+		transition: border-bottom-color 0.2s ease;
+
+		@include max(sm) {
+			height: 30px;
+			font-size: 14px;
+		}
+
+		&:focus {
+			border-bottom-color: $black;
+		}
+	}
+
+	&--phone {
+		input::placeholder {
+			color: $gray-6b;
+		}
+	}
+}

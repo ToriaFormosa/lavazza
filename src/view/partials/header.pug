@@ -1,0 +1,21 @@
+header.header.wow.fadeInDown
+	.container.header__container
+		.header__col
+			nav.header__nav
+				each item in MENU
+					li
+						a(href=item.url)!= item.text
+		.header__col
+			.header__phone
+				a(href='tel:+74956407408') +7 (495) 640-74-08
+			.header__burger-wrapper
+				.header__burger
+	.header__mobile
+		nav.header__nav
+			each item in MENU
+				li
+					a(href=item.url)!= item.text
+		.header__phone
+			a(href='tel:+74956407408') +7 (495) 640-74-08
+		.header__close
+			+icon('close')(width='24', height='24')

@@ -1,0 +1,99 @@
+.advantages {
+	padding: 105px 0 108px;
+
+	@include max(md) {
+		padding: 50px 0;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include max(md) {
+			flex-direction: column;
+		}
+	}
+
+	&__title {
+		@include max(xs) {
+			text-align: center;
+		}
+	}
+
+	&__image {
+		width: 40%;
+		position: relative;
+
+		@include max(md) {
+			width: 100%;
+			height: 0;
+			padding-top: 100%;
+			margin-top: 40px;
+			order: 1;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+			@include max(md) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+
+	&__content {
+		width: 48.5%;
+
+		@include max(md) {
+			width: 100%;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 22px;
+	}
+
+	&__item {
+		width: 47%;
+		margin-top: 52px;
+
+		@include max(md) {
+			margin-top: 25px;
+		}
+
+		@include max(xs) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 145%;
+			margin-top: 17px;
+
+			@include max(md) {
+				margin-top: 10px;
+			}
+
+			@include max(xs) {
+				text-align: center;
+			}
+
+			span {
+				color: $blue;
+			}
+		}
+	}
+}

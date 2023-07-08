@@ -1,0 +1,64 @@
+section.first-screen
+	.container.first-screen__container
+		.first-screen__col.wow.fadeInLeft(data-wow-delay='0.2s')
+			h1.first-screen__title.first-screen__title--mobile Выбери свою <br> бесплатную <br> кофемашину Lavazza!
+			h1.first-screen__title Кофемашина
+				br
+				span Lavazza <span class="model">LB 1100</span>
+				br
+				| в аренду бесплатно
+			.first-screen__text Выбери свою бесплатную кофемашину Lavazza!
+			.first-screen__btn
+				+button('Заказать звонок', '', '#')
+			.first-screen__nav
+				.slider-nav__pagi.pagi-desk
+				a.first-screen__anchor.anchor(href='#choice')
+					+icon('arrow-down')(width='13', height='29')
+		.first-screen__col
+			.first-screen__marquee.js-marquee-1
+				span кофемашина бесплатно
+				span кофемашина бесплатно
+				span кофемашина бесплатно
+			.first-screen__slider.swiper-container.__js_slider-products.wow.fadeInRight(data-wow-delay='0.4s')
+				.swiper-wrapper
+					.first-screen__product.swiper-slide
+						.first-screen__product-num
+							span.num 50
+							| капсул/мес.
+						.first-screen__product-image
+							img(src='images/products/1.png', srcset='images/products/1@2x.png 2x', alt='')
+						.first-screen__product-price
+							span.price 40
+								span.symbol ₽
+							| за капсулу
+					.first-screen__product.swiper-slide
+						.first-screen__product-num
+							span.num 200
+							| капсул/мес.
+						.first-screen__product-image
+							img(src='images/products/2.png', srcset='images/products/2@2x.png 2x', alt='')
+						.first-screen__product-price
+							span.price 40
+								span.symbol ₽
+							| за капсулу
+					.first-screen__product.swiper-slide
+						.first-screen__product-num
+							span.num 200
+							| капсул/мес.
+						.first-screen__product-image
+							img(src='images/products/3.png', srcset='images/products/3@2x.png 2x', alt='')
+						.first-screen__product-price
+							span.price 40
+								span.symbol ₽
+							| за капсулу
+					.first-screen__product.swiper-slide
+						.first-screen__product-num
+							span.num 200
+							| капсул/мес.
+						.first-screen__product-image
+							img(src='images/products/4.png', srcset='images/products/4@2x.png 2x', alt='')
+						.first-screen__product-price
+							span.price 40
+								span.symbol ₽
+							| за капсулу
+			.slider-nav__pagi.pagi-mob

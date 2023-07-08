@@ -1,0 +1,11 @@
+section.feedback
+	.container
+		.title.title--left Закажите бесплатную дегустацию
+		form.feedback__form(action='', method='post')
+			input(type='hidden')
+			+field('text', 'firstName', 'feedback__field', 'Имя')(required = true)
+			+field('email', 'email', 'feedback__field', 'E-mail')(required = true)
+			+field('tel', 'phone', 'field--phone feedback__field feedback__field--phone')(placeholder='+7', required = true)
+			+button('Отправить', 'feedback__submit')(type='submit')
+		.feedback__policy Нажимая на кнопку «Отправить», вы соглашаетесь с
+			|  политикой конфиденциальности персональных данных и пользовательским соглашением

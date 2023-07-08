@@ -1,0 +1,150 @@
+.appointment {
+	padding: 92px 0 98px;
+	overflow: hidden;
+
+	@include max(md) {
+		padding: 0;
+		position: relative;
+	}
+
+	&__bg {
+		display: none;
+		background: url("../images/appointment/bg.jpg") no-repeat center center fixed;
+		background-size: cover;
+		filter: blur(8px);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		@include max(md) {
+			display: block;
+		}
+	}
+
+	&__mobile {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: calc(100% + 48px);
+		min-height: 700px;
+		padding: 100px 30px;
+		margin: -24px;
+		background-color: rgba($black, 0.4);
+		position: relative;
+		z-index: 2;
+		box-sizing: border-box;
+
+		@include max(md) {
+			display: flex;
+		}
+
+		@include max(sm) {
+			padding: 60px 30px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 60px;
+	}
+
+	&__row-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 31%;
+		font-size: 18px;
+		line-height: 20px;
+		color: $white;
+		text-align: center;
+
+		@include max(md) {
+			font-size: 14px;
+			line-height: 17px;
+		}
+
+		svg {
+			width: 100%;
+			height: 100%;
+			fill: $white;
+		}
+
+		p {
+			margin-top: 10px;
+		}
+	}
+
+	&__icon {
+		max-width: 150px;
+		width: 100%;
+		height: 150px;
+
+		@include max(sm) {
+			height: 70px;
+		}
+	}
+
+	&__desk {
+		display: block;
+
+		@include max(md) {
+			display: none;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-top: 70px;
+
+		@include max(md) {
+			margin-top: 40px;
+		}
+	}
+
+	&__item {
+		width: 31.5%;
+		position: relative;
+
+		@include max(lg) {
+			width: 48%;
+			margin-bottom: 35px;
+		}
+
+		@include max(sm) {
+			width: 100%;
+		}
+
+		p {
+			font-size: 24px;
+			line-height: 145%;
+			font-weight: 500;
+			margin-top: 20px;
+
+			@include max(lg) {
+				margin-top: 10px;
+			}
+		}
+
+		&--big {
+			@include max(lg) {
+				order: 1;
+			}
+		}
+	}
+
+	&__image {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
